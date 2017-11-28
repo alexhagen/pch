@@ -1,4 +1,3 @@
-
 import sys
 import notify2
 from notify2 import Notification

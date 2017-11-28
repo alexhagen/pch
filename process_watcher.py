@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import sys
 import argparse
 from argparse import RawTextHelpFormatter
@@ -145,7 +143,7 @@ try:
                             template = '{executable} process {pid} ended' + ': {}'.format(args.tag)
                         else:
                             template = '{executable} process {pid} ended'
-                        
+
                         comm.send(process=process, subject_format=template, **send_args)
 
             except:

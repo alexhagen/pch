@@ -1,4 +1,3 @@
-
 import logging
 import json
 import subprocess
@@ -22,7 +21,7 @@ def send(channel=None, process=None):
     #-H 'Content-type: application/json' \
     #--data '{"text": "This is posted to <#general> and comes from *monkey-bot*.", "channel": "#general", "username": "monkey-bot", "icon_emoji": ":monkey_face:"}' \
     #https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
-  
+
     cmd_template = "curl -X POST -H 'Content-type: application/json' --data '{}' {}"
     payload = json.dumps({"text": body, "icon_emoji": ":computer:"})
     url = "https://hooks.slack.com/services/{}".format(channel)
